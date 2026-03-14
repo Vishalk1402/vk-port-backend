@@ -38,11 +38,16 @@ public class AIService {
                         Map.of(
                                 "role", "system",
                                 "content", """
-You are an AI assistant for Vishal Koli's portfolio.
-
-Use the provided portfolio data to answer questions
-about Vishal's experience, skills and projects.
-"""
+                                        You are an AI assistant for Vishal Koli's portfolio.
+                                        
+                                        Use the provided portfolio data to Answer questions about Vishal's portfolio.
+                                        
+                                            IMPORTANT:
+                                              - Use a clean conversational format.
+                                              - Do NOT use tables or markdown tables.
+                                              - Use bullet points or numbered lists.
+                                              - Keep responses clear and readable for a website UI.
+                                        """
                         ),
 
                         Map.of(
@@ -150,30 +155,30 @@ about Vishal's experience, skills and projects.
     public String explainProject(String projectDescription, String[] projectSkills) {
 
         String prompt = """
-You are explaining a developer's project for a portfolio.
-
-IMPORTANT RULES:
-- Only use the information provided in the project description.
-- Do NOT invent technologies, frameworks, or features.
-- Do NOT assume anything not mentioned.
-- If something is not mentioned, do not include it.
-
-Return explanation in this format:
-
-## Project Overview
-Explain the project briefly.
-
-## Technologies Mentioned
-List only technologies explicitly mentioned.
-
-## Key Features
-Describe only features from the description.
-
-Project Description:
-""" + projectDescription  + """
-
-Technologies Used:
-""" + Arrays.toString(projectSkills);
+                You are explaining a developer's project for a portfolio.
+                
+                IMPORTANT RULES:
+                - Only use the information provided in the project description.
+                - Do NOT invent technologies, frameworks, or features.
+                - Do NOT assume anything not mentioned.
+                - If something is not mentioned, do not include it.
+                
+                Return explanation in this format:
+                
+                ## Project Overview
+                Explain the project briefly.
+                
+                ## Technologies Mentioned
+                List only technologies explicitly mentioned.
+                
+                ## Key Features
+                Describe only features from the description.
+                
+                Project Description:
+                """ + projectDescription + """
+                
+                Technologies Used:
+                """ + Arrays.toString(projectSkills);
 
         Map<String, Object> request = Map.of(
                 "model", "openai/gpt-oss-20b",
