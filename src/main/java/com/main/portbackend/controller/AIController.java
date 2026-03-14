@@ -42,4 +42,9 @@ public class AIController {
 
         return Map.of("result", result);
     }
+
+    @GetMapping("/health")
+    public String health(){
+        return "Server is running 🚀";
+    }
 }
