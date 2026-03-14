@@ -33,6 +33,32 @@
     "IntelliJ IDEA"
   ],
 
+  "education": [
+    {
+      "degree": "Bachelor of Engineering (B.E)",
+      "branch": "E&TC Engineering",
+      "college": "S.S.B.T COET",
+      "location": "Jalgaon, Maharashtra 425002",
+      "cgpa": 8.11,
+      "start_year": 2021,
+      "end_year": 2025
+    },
+    {
+      "degree": "Higher Secondary Certificate (HSC)",
+      "college": "S.P.D.M College",
+      "location": "Shirpur, Maharashtra 425427",
+      "percentage": 82,
+      "year": 2021
+    },
+    {
+      "degree": "Secondary School Certificate (SSC)",
+      "school": "K.K.M.V High School",
+      "location": "Arthe, Maharashtra 425427",
+      "percentage": 77.40,
+      "year": 2019
+    }
+  ],
+
   "vision": "Focused on leading the creation of scalable, high-performance digital ecosystems where innovation meets reliability—setting new benchmarks in web and Java development and inspiring teams to build technology that creates lasting impact.",
 
   "mission": "Committed to engineering reliable and scalable digital systems that solve meaningful challenges, continuously refining technical expertise and delivering technology designed for long-term impact.",
