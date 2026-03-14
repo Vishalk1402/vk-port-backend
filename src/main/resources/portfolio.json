@@ -1,0 +1,119 @@
+{
+  "profile": {
+    "name": "Vishal Koli",
+    "title": "Web Developer / Java Enthusiast / Software Developer",
+    "summary": "Specializing in modern web technologies and Java-based systems, delivering secure and performance-driven applications built for scale.",
+    "currentRole": "Software Engineer at Siemens"
+  },
+
+  "experience": {
+    "description": "Currently working as a Software Engineer at Siemens, contributing to the development of scalable and reliable software solutions. Focused on writing clean, maintainable code and delivering high-performance applications aligned with industry standards."
+  },
+
+  "skills": [
+    "Java",
+    "JavaScript",
+    "Spring Boot",
+    "React",
+    "SQL",
+    "MySQL",
+    "MongoDB",
+    "JWT",
+    "REST API",
+    "Hibernate",
+    "JDBC",
+    "Postman",
+    "Docker",
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS",
+    "Git & GitHub",
+    "Copilot",
+    "Eclipse",
+    "IntelliJ IDEA"
+  ],
+
+  "vision": "Focused on leading the creation of scalable, high-performance digital ecosystems where innovation meets reliability—setting new benchmarks in web and Java development and inspiring teams to build technology that creates lasting impact.",
+
+  "mission": "Committed to engineering reliable and scalable digital systems that solve meaningful challenges, continuously refining technical expertise and delivering technology designed for long-term impact.",
+
+  "coreValues": [
+    {
+      "title": "Engineering Excellence",
+      "description": "Writing clean, scalable, and maintainable code that meets high standards of performance and reliability."
+    },
+    {
+      "title": "Continuous Growth",
+      "description": "Constantly learning, adapting, and evolving with modern technologies and best practices."
+    },
+    {
+      "title": "Innovation with Purpose",
+      "description": "Building solutions that solve real-world problems and create meaningful impact."
+    },
+    {
+      "title": "Integrity & Accountability",
+      "description": "Taking ownership of responsibilities and delivering solutions with transparency and professionalism."
+    }
+  ],
+
+  "philosophy": "Great software is built on simplicity, strong architecture, and thoughtful user experience. Technology should not only function efficiently but also scale sustainably and create measurable impact.",
+
+  "projects": [
+    {
+      "name": "DMA for Farmers",
+      "description": "A responsive web platform enabling farmers to sell produce directly to consumers.",
+      "liveLink": "https://dma-forfarmer.pages.dev/",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ]
+    },
+    {
+      "name": "Mess Management System",
+      "description": "A web-based system to manage hostel mess operations and administration.",
+      "liveLink": "https://mess-management-system-rust.vercel.app/",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ]
+    },
+    {
+      "name": "Art Portfolio",
+      "description": "A portfolio website showcasing creativity and craftsmanship across various mediums with modern web technologies.",
+      "liveLink": "https://art-port.pages.dev/",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ]
+    },
+    {
+      "name": "Gallery",
+      "description": "Creative image gallery with multiple layout styles and responsive design.",
+      "liveLink": "https://891cf820.gallery-dh4.pages.dev/",
+      "technologies": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ]
+    },
+    {
+      "name": "Notes Management",
+      "description": "Secure full-stack notes application with JWT authentication, cloud file uploads, and Docker deployment built with React, Spring Boot, and MySQL.",
+      "liveLink": "https://notes-frontend-ebon.vercel.app/",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "Java",
+        "Spring Boot",
+        "Docker",
+        "MySQL"
+      ]
+    }
+  ]
+}

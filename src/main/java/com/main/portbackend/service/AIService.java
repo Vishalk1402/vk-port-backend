@@ -2,6 +2,7 @@ package com.main.portbackend.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -19,11 +20,16 @@ public class AIService {
     @Value("${groq.api.url}")
     private String apiUrl;
 
+    @Autowired
+    private PortfolioService portfolioService;
+
     private final WebClient webClient = WebClient.create();
 
     private final ObjectMapper mapper = new ObjectMapper();
 
     public String askAI(String question) {
+
+        String portfolioContext = portfolioService.getPortfolioContext();
 
         Map<String, Object> request = Map.of(
                 "model", "openai/gpt-oss-20b",
@@ -32,17 +38,16 @@ public class AIService {
                         Map.of(
                                 "role", "system",
                                 "content", """
-                                        You are an AI assistant for Vishal Koli's portfolio.
-                                        
-                                        Vishal Koli is a Software Engineer at Siemens.
-                                        
-                                        SSC : KKMV Highschool Arthe tal. Shirpur, Dist. Dhule 425427. completed in 2019 with 77.40 percentage.
-                                        
-                                        Skills:
-                                        Java, Spring Boot, React, JavaScript, SQL, MongoDB, Docker, REST APIs.
-                                        
-                                        Answer questions about Vishal's skills, experience, and projects.
-                                        """
+You are an AI assistant for Vishal Koli's portfolio.
+
+Use the provided portfolio data to answer questions
+about Vishal's experience, skills and projects.
+"""
+                        ),
+
+                        Map.of(
+                                "role", "system",
+                                "content", portfolioContext
                         ),
 
                         Map.of(
@@ -51,7 +56,6 @@ public class AIService {
                         )
                 )
         );
-
         String response = webClient.post()
                 .uri(apiUrl)
                 .header("Authorization", "Bearer " + apiKey)
