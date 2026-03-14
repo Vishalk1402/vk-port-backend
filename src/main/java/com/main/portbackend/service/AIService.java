@@ -23,30 +23,27 @@ public class AIService {
 
     private final ObjectMapper mapper = new ObjectMapper();
 
-    public String askAI(String question) {
+    public String askAI(String question, Map<String,Object> context) {
 
-        Map<String, Object> request = Map.of(
-                "model", "openai/gpt-oss-20b",
+        String portfolioData = context.toString();
+
+        Map<String,Object> request = Map.of(
+                "model","openai/gpt-oss-20b",
                 "messages", List.of(
 
                         Map.of(
-                                "role", "system",
-                                "content", """
-                                        You are an AI assistant for Vishal Koli's portfolio.
-                                        
-                                        Vishal Koli is a Software Engineer at Siemens.
-                                        
-                                        SSC : KKMV Highschool Arthe tal. Shirpur, Dist. Dhule 425427. completed in 2019 with 77.40 percentage.
-                                        
-                                        Skills:
-                                        Java, Spring Boot, React, JavaScript, SQL, MongoDB, Docker, REST APIs.
-                                        
-                                        Answer questions about Vishal's skills, experience, and projects.
-                                        """
+                                "role","system",
+                                "content",
+                                "You are an AI assistant for Vishal Koli's portfolio."
                         ),
 
                         Map.of(
-                                "role", "user",
+                                "role","system",
+                                "content","Portfolio data:\n" + portfolioData
+                        ),
+
+                        Map.of(
+                                "role","user",
                                 "content", question
                         )
                 )
