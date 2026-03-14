@@ -36,6 +36,8 @@ public class AIService {
                                         
                                         Vishal Koli is a Software Engineer at Siemens.
                                         
+                                        SSC : KKMV Highschool Arthe tal. Shirpur, Dist. Dhule 425427. completed in 2019 with 77.40 percentage.
+                                        
                                         Skills:
                                         Java, Spring Boot, React, JavaScript, SQL, MongoDB, Docker, REST APIs.
                                         
